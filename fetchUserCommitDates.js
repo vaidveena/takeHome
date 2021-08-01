@@ -1,4 +1,4 @@
-var theButton = document.getElementById("b");
+var theButton = document.getElementById("fetchCommits");
 theButton.onclick = fetchUserCommitDates;
 
 /*
