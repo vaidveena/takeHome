@@ -2,15 +2,18 @@ var theButton = document.getElementById("b");
 theButton.onclick = fetchUserCommitDates;
 
 /*
-Main function that makes the API calls and processes response. Input is gitUsername, token and num_commits
+Main function that makes the API calls and processes response. Input is gitUsername, token
 */
 function fetchUserCommitDates() {
 
   var gitHubUsername = document.getElementById('username').value;
   var accessToken = document.getElementById('token').value;
 
-  console.log('tokens are', gitHubUsername, accessToken);
+  console.log('user inputs are', gitHubUsername, accessToken);
 
+  /*
+  Function to Sort dates
+  */
   var sort_asc = function(commit1, commit2) {
     console.log('commit1 is', commit1);
     console.log('commit2 is', commit2);
@@ -22,7 +25,7 @@ function fetchUserCommitDates() {
   var commits = [];
   var done = 0;
   var countToDo = 0;
-  var num_commits = 60;
+  var num_commits = 60; //per Problem Description
   try {
 
   /* Approach is outlined here:
