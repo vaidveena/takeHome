@@ -115,12 +115,12 @@ function exportFile(csv, fileName) {
 
 
 /*
+Takes an array of dates as input and calculates the cumulative diff in days between two pairs of dates. Finally compute the average.
 */
 function calculateMeanTime(commits)
 {
-	var sum = 0;
-	var prevdate = false;
-
+  var sum = 0;
+  var prevdate = false;
   for(var k in commits) {
     var thedate = moment(commits[k], "YYYY-MM-DDTHH:mm:ssZ");
     if(prevdate) {
@@ -128,7 +128,7 @@ function calculateMeanTime(commits)
     }
     prevdate = thedate;
   }
-	var avg = (sum / (commits.length - 1));
+  var avg = (sum / (commits.length - 1));
   console.log('calculateMeanTime', avg);
   return avg;
 }
