@@ -36,7 +36,7 @@ function fetchUserCommitDates() {
   Since Github APIs return only 30 rows, I'm using query_param per_page to ask the API to fetch 100 rows. This could be changed to   60 for our use case..
   */
     $.ajax({
-      url: 'https://api.github.com/users/' + gitHubUsername + '/repos' + '?per_page=100',
+      url: 'https://api.github.com/users/' + gitHubUsername + '/repos' + '?per_page=60',
       dataType: "json",
 
       beforeSend: function(xhr) {
