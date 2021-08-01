@@ -1,4 +1,17 @@
 # compass-takeHome
+
+Screenshot of program taking username and token as input. Output is stored in GitCommits.csv file.
+
+Steps to run this program:
+
+In JsFiddle, copy the GetUserInput.html in the Html portion of fiddle. This presents the UI to take inputs from user (gitUserName and token)
+Core logic resides in fetchUserCommitDates.js file. When user clicks fetch commits button, the GitHub API calls to repos and commits are performed and result set is sorted and dates are returned in CSV file.
+Another approach to use Search Commit API is coded in SearchCommitAPI.js.
+
+
+<img width="1618" alt="Screen Shot 2021-08-01 at 4 07 45 PM" src="https://user-images.githubusercontent.com/9029916/127788006-ac6051be-37eb-4a78-a2ce-5a833f312794.png">
+
+
 Approach 1:
 
 Take github username and token as input.
